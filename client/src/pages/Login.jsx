@@ -42,7 +42,10 @@ const Login = () => {
         if (validateInputs()) {
             // Perform login logic here (e.g., API call)
             console.log('Login successful!');
+
+            notify("Login successful!","success")
         } else {
+            notify("Login failed. Please fix the errors.","error")
             console.log('Login failed. Please fix the errors.');
         }
     };
@@ -55,6 +58,9 @@ const Login = () => {
 <>
         <div className="App">
             <div className="login-container">
+
+                    <h1>Login</h1>
+
                 <div className="form-group">
                     <label>Email:</label>
                     <input
@@ -63,7 +69,10 @@ const Login = () => {
                         value={email}
                         onChange={handleInputChange}
                     />
+                    <div>
+
                     {errors.email && <span className="error">{errors.email}</span>}
+                    </div>
                 </div>
 
                 <div className="form-group">
@@ -74,7 +83,10 @@ const Login = () => {
                         value={password}
                         onChange={handleInputChange}
                     />
+                    <div>
+
                     {errors.password && <span className="error">{errors.password}</span>}
+                    </div>
                 </div>
 
                 <button onClick={handleSubmit}>Login</button>

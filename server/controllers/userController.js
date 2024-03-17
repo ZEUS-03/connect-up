@@ -64,26 +64,4 @@ const loginUserCtrl = asyncHandler(async (req, res) => {
   }
 });
 
-// const loginUserCtrl = asyncHandler(async (req, res) => {
-//   try {
-//     const { email, password } = req.body;
-//     const userFound = await User?.findOne({ email });
-
-//     if (userFound && (await bcrypt.compare(password, userFound?.password))) {
-//       res.status(201).json({
-//         status: "success",
-//         msg: "Logged in successfully",
-//         userFound,
-//         token: generateWebToken(userFound?._id),
-//       });
-//     }else{
-//       throw new Error("Invalid Credentials!")
-//     }
-//   } catch (error) {
-//     console.log("internal server error: " + error);
-//     throw new Error("Internal Server Error: " + error);
-//   }
-
-// });
-
 module.exports = { registerUserCtrl, loginUserCtrl };

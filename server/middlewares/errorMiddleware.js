@@ -1,5 +1,5 @@
 const globalErrorHandler = (err, req, res, next) => {
-  return res.status(400).json({ status: "Something went wrong!" });
+  return res.status(400).json({ err });
 };
 
 const invalidRoute = (req, res, next) => {

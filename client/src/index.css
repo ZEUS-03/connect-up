@@ -1,6 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
 
+.image-container {
+  width: 100vw; /* 100% of viewport width */
+  height: 100vh; /* 100% of viewport height */
+  background-image: url("/assets/login.png"); /* Replace with your image URL */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* No repeating of the image */
+}
 
+.login-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 25%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
 
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
 
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
 
+/* button {
+  color: #ffffff;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+
+/* button:hover {
+  background-color: #212121;
+} */
+
+.error {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.input-divs {
+  margin-bottom: 20px;
+}
